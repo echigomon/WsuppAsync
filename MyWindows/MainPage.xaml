@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="MyWindows.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyWindows"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="50" Margin="100,50,0,0" TextWrapping="Wrap"
+			Text="ＷｓｕｐｐＡｓｙｎｃ" VerticalAlignment="Top" Width="600" FontSize="32"/>
+        <TextBox x:Name="TextBox01" HorizontalAlignment="Left" Margin="50,0,0,259" TextWrapping="Wrap" Text="TextBox"
+			Width="1180" Height="356" VerticalAlignment="Bottom" FontSize="26.667"/>
+        <Button x:Name="button1" Content="Wsupp" HorizontalAlignment="Right" Margin="0,0,303,167" VerticalAlignment="Bottom" Height="50" Width="200"
+			Click="button1_Click" />
+        <Button x:Name="button3" Content="Reset" HorizontalAlignment="Right" Margin="0,0,50,167" VerticalAlignment="Bottom" Width="200" Height="50"
+			Click="button3_Click" />
+
+
+    </Grid>
+</Page>
