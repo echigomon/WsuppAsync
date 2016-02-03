@@ -17,6 +17,5 @@
         <Button x:Name="button3" Content="Reset" HorizontalAlignment="Right" Margin="0,0,50,167" VerticalAlignment="Bottom" Width="200" Height="50"
 			Click="button3_Click" />
 
-
     </Grid>
 </Page>

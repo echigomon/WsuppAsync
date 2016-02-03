@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using LRSkipAsync;
 
 namespace WsuppAsync
@@ -11,10 +12,10 @@ namespace WsuppAsync
     {
         #region 共有領域
         // '16.01.13 両側余白情報削除の追加　及び、右側・左側余白処理のコメント化
-/*
-        CS_RskipAsync rskip;             // 右側余白情報を削除
-        CS_LskipAsync lskip;             // 左側余白情報を削除
-*/
+        /*
+                CS_RskipAsync rskip;             // 右側余白情報を削除
+                CS_LskipAsync lskip;             // 左側余白情報を削除
+        */
         CS_LRskipAsync lrskip;           // 両側余白情報を削除
 
         struct SepString
@@ -27,8 +28,8 @@ namespace WsuppAsync
             internal String back;       // 後方キーワード
             internal String spc;        // 空白設定情報
         }
-        private String _wbuf;       // ソース情報
-        private Boolean _empty;     // ソース情報有無
+        private static String _wbuf;       // ソース情報
+        private static Boolean _empty;     // ソース情報有無
         public String Wbuf
         {
             get
@@ -45,18 +46,18 @@ namespace WsuppAsync
                 else
                 {   // 整形処理を行う
                     // 不要情報削除
-/*
-                    if (rskip == null || lskip == null)
-                    {   // 未定義？
-                        rskip = new CS_RskipAsync();
-                        lskip = new CS_LskipAsync();
-                    }
-                    rskip.Wbuf = _wbuf;
-                    rskip.ExecAsync();
-                    lskip.Wbuf = rskip.Wbuf;
-                    lskip.ExecAsync();
-                    _wbuf = lskip.Wbuf;
-*/
+                    /*
+                                        if (rskip == null || lskip == null)
+                                        {   // 未定義？
+                                            rskip = new CS_RskipAsync();
+                                            lskip = new CS_LskipAsync();
+                                        }
+                                        rskip.Wbuf = _wbuf;
+                                        rskip.ExecAsync();
+                                        lskip.Wbuf = rskip.Wbuf;
+                                        lskip.ExecAsync();
+                                        _wbuf = lskip.Wbuf;
+                    */
                     if (lrskip == null)
                     {   // 未定義？
                         lrskip = new CS_LRskipAsync();
@@ -248,18 +249,18 @@ namespace WsuppAsync
             else
             {   // 整形処理を行う
                 // 不要情報削除
-/*
-                if (rskip == null || lskip == null)
-                {   // 未定義？
-                    rskip = new CS_RskipAsync();
-                    lskip = new CS_LskipAsync();
-                }
-                rskip.Wbuf = _wbuf;
-                await rskip.ExecAsync();
-                lskip.Wbuf = rskip.Wbuf;
-                await lskip.ExecAsync();
-                _wbuf = lskip.Wbuf;
-*/
+                /*
+                                if (rskip == null || lskip == null)
+                                {   // 未定義？
+                                    rskip = new CS_RskipAsync();
+                                    lskip = new CS_LskipAsync();
+                                }
+                                rskip.Wbuf = _wbuf;
+                                await rskip.ExecAsync();
+                                lskip.Wbuf = rskip.Wbuf;
+                                await lskip.ExecAsync();
+                                _wbuf = lskip.Wbuf;
+                */
                 if (lrskip == null)
                 {   // 未定義？
                     lrskip = new CS_LRskipAsync();
